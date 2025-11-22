@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Kasir Mini Market</title>
+</head>
+<body>
+    <div class="container">
+    <h1>🛒 Sistem Kasir Mini Market</h1>
+
+    <!-- Daftar Barang -->
+    <section>
+      <h2>📦 Daftar Barang</h2>
+      <table id="tabelBarang">
+        <thead>
+          <tr>
+            <th>Kode</th>
+            <th>Nama Barang</th>
+            <th>Harga</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <!-- Tambah/Edit Barang -->
+    <section>
+      <h2>➕ Tambah / Edit Barang</h2>
+      <input type="text" id="kode" placeholder="Kode Barang">
+      <input type="text" id="nama" placeholder="Nama Barang">
+      <input type="number" id="harga" placeholder="Harga">
+      <button class="btn btn-primary" onclick="tambahBarang()">Tambah</button>
+      <button class="btn btn-success" onclick="editBarang()">Edit</button>
+      <button class="btn btn-danger" onclick="hapusBarang()">Hapus</button>
+    </section>
+
+    <!-- Keranjang -->
+    <section>
+      <h2>🛍️ Keranjang Belanja</h2>
+      <input type="text" id="kodeBeli" placeholder="Kode Barang">
+      <input type="number" id="jumlahBeli" placeholder="Jumlah">
+      <button class="btn btn-primary" onclick="beliBarang()">Tambah ke Keranjang</button>
+
+      <table id="tabelKeranjang">
+        <thead>
+          <tr>
+            <th>Nama Barang</th>
+            <th>Harga</th>
+            <th>Jumlah</th>
+            <th>Total</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <!-- Pembayaran -->
+    <section>
+      <h2>💳 Pembayaran</h2>
+      <select id="metode">
+        <option value="Cash">Cash</option>
+        <option value="QRIS">QRIS</option>
+        <option value="Debit">Debit</option>
+      </select>
+      <button class="btn btn-success" onclick="strukBelanja()">Cetak Struk</button>
+    </section>
+
+    <!-- Output Struk -->
+    <section>
+      <div class="output" id="output">
+        <p>Struk akan muncul di sini...</p>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
